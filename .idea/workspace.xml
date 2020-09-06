@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1h0qeh9kbMpUmgHXyDhM61Ox6iU" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="google.prototext.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/definitions" />
+      <recent name="$PROJECT_DIR$/multi-to-do" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="710" y="403" key="#Go_Modules" timestamp="1599159049822">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="710" y="403" key="#Go_Modules/0.0.1920.1200@0.0.1920.1200" timestamp="1599159049822" />
+    <state x="389" y="151" key="SettingsEditor" timestamp="1599159276971">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="389" y="151" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1599159276971" />
+    <state x="634" y="418" key="cloudConfig.PluginsDialog" timestamp="1599158508976">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="634" y="418" key="cloudConfig.PluginsDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1599158508976" />
+    <state x="541" y="168" key="search.everywhere.popup" timestamp="1599158950028">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="541" y="168" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1599158950028" />
+  </component>
+</project>
