@@ -31,6 +31,9 @@ export class LoginResponse extends jspb.Message {
   getToken(): string;
   setToken(value: string): void;
 
+  getSuccess(): boolean;
+  setSuccess(value: boolean): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LoginResponse.AsObject;
   static toObject(includeInstance: boolean, msg: LoginResponse): LoginResponse.AsObject;
@@ -44,6 +47,7 @@ export class LoginResponse extends jspb.Message {
 export namespace LoginResponse {
   export type AsObject = {
     token: string,
+    success: boolean,
   }
 }
 
@@ -71,6 +75,9 @@ export class LogoutResponse extends jspb.Message {
   getLoggedOut(): boolean;
   setLoggedOut(value: boolean): void;
 
+  getSuccess(): boolean;
+  setSuccess(value: boolean): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LogoutResponse.AsObject;
   static toObject(includeInstance: boolean, msg: LogoutResponse): LogoutResponse.AsObject;
@@ -84,6 +91,7 @@ export class LogoutResponse extends jspb.Message {
 export namespace LogoutResponse {
   export type AsObject = {
     loggedOut: boolean,
+    success: boolean,
   }
 }
 

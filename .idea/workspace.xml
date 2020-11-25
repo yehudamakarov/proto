@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="">
+    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="making sure import path is clean by using source_relative">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/definitions/auth/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/definitions/auth/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/go/auth/auth.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages/go/auth/auth.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +34,7 @@
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -45,6 +68,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="making sure import path is clean by using source_relative" />
+    <option name="LAST_COMMIT_MESSAGE" value="making sure import path is clean by using source_relative" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -53,14 +91,26 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="710" y="403" key="#Go_Modules/0.0.1920.1200@0.0.1920.1200" timestamp="1599159049822" />
+    <state x="697" y="239" key="RollbackChangesDialog" timestamp="1606277858910">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="697" y="239" key="RollbackChangesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1606277858910" />
     <state x="389" y="151" key="SettingsEditor" timestamp="1599159276971">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="389" y="151" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1599159276971" />
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2" timestamp="1606277353062">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606277353062" />
     <state x="634" y="418" key="cloudConfig.PluginsDialog" timestamp="1599158508976">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="634" y="418" key="cloudConfig.PluginsDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1599158508976" />
+    <state x="707" y="501" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606277336988">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="707" y="501" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606277336988" />
     <state x="541" y="168" key="search.everywhere.popup" timestamp="1599158950028">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

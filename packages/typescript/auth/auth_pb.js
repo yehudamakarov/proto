@@ -292,7 +292,8 @@ proto.auth.LoginResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.auth.LoginResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    token: jspb.Message.getFieldWithDefault(msg, 1, "")
+    token: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    success: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -333,6 +334,10 @@ proto.auth.LoginResponse.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setToken(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSuccess(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -369,6 +374,13 @@ proto.auth.LoginResponse.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getSuccess();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -387,6 +399,24 @@ proto.auth.LoginResponse.prototype.getToken = function() {
  */
 proto.auth.LoginResponse.prototype.setToken = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool success = 2;
+ * @return {boolean}
+ */
+proto.auth.LoginResponse.prototype.getSuccess = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.auth.LoginResponse} returns this
+ */
+proto.auth.LoginResponse.prototype.setSuccess = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -552,7 +582,8 @@ proto.auth.LogoutResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.auth.LogoutResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    loggedOut: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    loggedOut: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
+    success: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -593,6 +624,10 @@ proto.auth.LogoutResponse.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLoggedOut(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSuccess(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -629,6 +664,13 @@ proto.auth.LogoutResponse.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getSuccess();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -647,6 +689,24 @@ proto.auth.LogoutResponse.prototype.getLoggedOut = function() {
  */
 proto.auth.LogoutResponse.prototype.setLoggedOut = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+/**
+ * optional bool success = 2;
+ * @return {boolean}
+ */
+proto.auth.LogoutResponse.prototype.getSuccess = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.auth.LogoutResponse} returns this
+ */
+proto.auth.LogoutResponse.prototype.setSuccess = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 

@@ -11,6 +11,7 @@ message LoginRequest {
 
 message LoginResponse {
   string token = 1;
+  bool success = 2;
 }
 
 message LogoutRequest {
@@ -19,6 +20,7 @@ message LogoutRequest {
 
 message LogoutResponse {
   bool logged_out = 1;
+  bool success = 2;
 }
 
 service AuthService {
