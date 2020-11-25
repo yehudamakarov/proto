@@ -4,28 +4,28 @@
 import * as auth_auth_pb from "../auth/auth_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type AuthServiceLogin = {
+type AuthLogin = {
   readonly methodName: string;
-  readonly service: typeof AuthService;
+  readonly service: typeof Auth;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof auth_auth_pb.LoginRequest;
   readonly responseType: typeof auth_auth_pb.LoginResponse;
 };
 
-type AuthServiceLogout = {
+type AuthLogout = {
   readonly methodName: string;
-  readonly service: typeof AuthService;
+  readonly service: typeof Auth;
   readonly requestStream: false;
   readonly responseStream: false;
   readonly requestType: typeof auth_auth_pb.LogoutRequest;
   readonly responseType: typeof auth_auth_pb.LogoutResponse;
 };
 
-export class AuthService {
+export class Auth {
   static readonly serviceName: string;
-  static readonly Login: AuthServiceLogin;
-  static readonly Logout: AuthServiceLogout;
+  static readonly Login: AuthLogin;
+  static readonly Logout: AuthLogout;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -56,7 +56,7 @@ interface BidirectionalStream<ReqT, ResT> {
   on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
 }
 
-export class AuthServiceClient {
+export class AuthClient {
   readonly serviceHost: string;
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);

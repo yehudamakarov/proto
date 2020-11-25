@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="making sure import path is clean by using source_relative">
+    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="added success to responses and removed duplicate service word.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/definitions/auth/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/definitions/auth/auth.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/go/auth/auth.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages/go/auth/auth.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript/auth/auth_pb.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="making sure import path is clean by using source_relative" />
-    <option name="LAST_COMMIT_MESSAGE" value="making sure import path is clean by using source_relative" />
+    <MESSAGE value="added success to responses and removed duplicate service word." />
+    <option name="LAST_COMMIT_MESSAGE" value="added success to responses and removed duplicate service word." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -99,10 +96,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="389" y="151" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1599159276971" />
-    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2" timestamp="1606277353062">
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2" timestamp="1606278081645">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606277353062" />
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606278081645" />
     <state x="634" y="418" key="cloudConfig.PluginsDialog" timestamp="1599158508976">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

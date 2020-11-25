@@ -4,42 +4,42 @@
 var auth_auth_pb = require("../auth/auth_pb");
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
-var AuthService = (function () {
-  function AuthService() {}
-  AuthService.serviceName = "auth.AuthService";
-  return AuthService;
+var Auth = (function () {
+  function Auth() {}
+  Auth.serviceName = "auth.Auth";
+  return Auth;
 }());
 
-AuthService.Login = {
+Auth.Login = {
   methodName: "Login",
-  service: AuthService,
+  service: Auth,
   requestStream: false,
   responseStream: false,
   requestType: auth_auth_pb.LoginRequest,
   responseType: auth_auth_pb.LoginResponse
 };
 
-AuthService.Logout = {
+Auth.Logout = {
   methodName: "Logout",
-  service: AuthService,
+  service: Auth,
   requestStream: false,
   responseStream: false,
   requestType: auth_auth_pb.LogoutRequest,
   responseType: auth_auth_pb.LogoutResponse
 };
 
-exports.AuthService = AuthService;
+exports.Auth = Auth;
 
-function AuthServiceClient(serviceHost, options) {
+function AuthClient(serviceHost, options) {
   this.serviceHost = serviceHost;
   this.options = options || {};
 }
 
-AuthServiceClient.prototype.login = function login(requestMessage, metadata, callback) {
+AuthClient.prototype.login = function login(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(AuthService.Login, {
+  var client = grpc.unary(Auth.Login, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -66,11 +66,11 @@ AuthServiceClient.prototype.login = function login(requestMessage, metadata, cal
   };
 };
 
-AuthServiceClient.prototype.logout = function logout(requestMessage, metadata, callback) {
+AuthClient.prototype.logout = function logout(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(AuthService.Logout, {
+  var client = grpc.unary(Auth.Logout, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -97,5 +97,5 @@ AuthServiceClient.prototype.logout = function logout(requestMessage, metadata, c
   };
 };
 
-exports.AuthServiceClient = AuthServiceClient;
+exports.AuthClient = AuthClient;
 

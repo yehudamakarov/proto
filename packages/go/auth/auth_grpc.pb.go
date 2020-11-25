@@ -13,58 +13,58 @@ import (
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion7
 
-// AuthServiceClient is the client API for AuthService service.
+// AuthClient is the client API for Auth service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type AuthServiceClient interface {
+type AuthClient interface {
 	Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error)
 	Logout(ctx context.Context, in *LogoutRequest, opts ...grpc.CallOption) (*LogoutResponse, error)
 }
 
-type authServiceClient struct {
+type authClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAuthServiceClient(cc grpc.ClientConnInterface) AuthServiceClient {
-	return &authServiceClient{cc}
+func NewAuthClient(cc grpc.ClientConnInterface) AuthClient {
+	return &authClient{cc}
 }
 
-var authServiceLoginStreamDesc = &grpc.StreamDesc{
+var authLoginStreamDesc = &grpc.StreamDesc{
 	StreamName: "Login",
 }
 
-func (c *authServiceClient) Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error) {
+func (c *authClient) Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error) {
 	out := new(LoginResponse)
-	err := c.cc.Invoke(ctx, "/auth.AuthService/Login", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/auth.Auth/Login", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-var authServiceLogoutStreamDesc = &grpc.StreamDesc{
+var authLogoutStreamDesc = &grpc.StreamDesc{
 	StreamName: "Logout",
 }
 
-func (c *authServiceClient) Logout(ctx context.Context, in *LogoutRequest, opts ...grpc.CallOption) (*LogoutResponse, error) {
+func (c *authClient) Logout(ctx context.Context, in *LogoutRequest, opts ...grpc.CallOption) (*LogoutResponse, error) {
 	out := new(LogoutResponse)
-	err := c.cc.Invoke(ctx, "/auth.AuthService/Logout", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/auth.Auth/Logout", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AuthServiceService is the service API for AuthService service.
+// AuthService is the service API for Auth service.
 // Fields should be assigned to their respective handler implementations only before
-// RegisterAuthServiceService is called.  Any unassigned fields will result in the
+// RegisterAuthService is called.  Any unassigned fields will result in the
 // handler for that method returning an Unimplemented error.
-type AuthServiceService struct {
+type AuthService struct {
 	Login  func(context.Context, *LoginRequest) (*LoginResponse, error)
 	Logout func(context.Context, *LogoutRequest) (*LogoutResponse, error)
 }
 
-func (s *AuthServiceService) login(_ interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func (s *AuthService) login(_ interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(LoginRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -74,14 +74,14 @@ func (s *AuthServiceService) login(_ interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     s,
-		FullMethod: "/auth.AuthService/Login",
+		FullMethod: "/auth.Auth/Login",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return s.Login(ctx, req.(*LoginRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
-func (s *AuthServiceService) logout(_ interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func (s *AuthService) logout(_ interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(LogoutRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -91,7 +91,7 @@ func (s *AuthServiceService) logout(_ interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     s,
-		FullMethod: "/auth.AuthService/Logout",
+		FullMethod: "/auth.Auth/Logout",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return s.Logout(ctx, req.(*LogoutRequest))
@@ -99,8 +99,8 @@ func (s *AuthServiceService) logout(_ interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-// RegisterAuthServiceService registers a service implementation with a gRPC server.
-func RegisterAuthServiceService(s grpc.ServiceRegistrar, srv *AuthServiceService) {
+// RegisterAuthService registers a service implementation with a gRPC server.
+func RegisterAuthService(s grpc.ServiceRegistrar, srv *AuthService) {
 	srvCopy := *srv
 	if srvCopy.Login == nil {
 		srvCopy.Login = func(context.Context, *LoginRequest) (*LoginResponse, error) {
@@ -113,7 +113,7 @@ func RegisterAuthServiceService(s grpc.ServiceRegistrar, srv *AuthServiceService
 		}
 	}
 	sd := grpc.ServiceDesc{
-		ServiceName: "auth.AuthService",
+		ServiceName: "auth.Auth",
 		Methods: []grpc.MethodDesc{
 			{
 				MethodName: "Login",
@@ -131,14 +131,14 @@ func RegisterAuthServiceService(s grpc.ServiceRegistrar, srv *AuthServiceService
 	s.RegisterService(&sd, nil)
 }
 
-// NewAuthServiceService creates a new AuthServiceService containing the
-// implemented methods of the AuthService service in s.  Any unimplemented
+// NewAuthService creates a new AuthService containing the
+// implemented methods of the Auth service in s.  Any unimplemented
 // methods will result in the gRPC server returning an UNIMPLEMENTED status to the client.
 // This includes situations where the method handler is misspelled or has the wrong
 // signature.  For this reason, this function should be used with great care and
 // is not recommended to be used by most users.
-func NewAuthServiceService(s interface{}) *AuthServiceService {
-	ns := &AuthServiceService{}
+func NewAuthService(s interface{}) *AuthService {
+	ns := &AuthService{}
 	if h, ok := s.(interface {
 		Login(context.Context, *LoginRequest) (*LoginResponse, error)
 	}); ok {
@@ -152,11 +152,11 @@ func NewAuthServiceService(s interface{}) *AuthServiceService {
 	return ns
 }
 
-// UnstableAuthServiceService is the service API for AuthService service.
+// UnstableAuthService is the service API for Auth service.
 // New methods may be added to this interface if they are added to the service
 // definition, which is not a backward-compatible change.  For this reason,
 // use of this type is not recommended.
-type UnstableAuthServiceService interface {
+type UnstableAuthService interface {
 	Login(context.Context, *LoginRequest) (*LoginResponse, error)
 	Logout(context.Context, *LogoutRequest) (*LogoutResponse, error)
 }
