@@ -4,42 +4,42 @@
 var auth_auth_pb = require("../auth/auth_pb");
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
-var Auth = (function () {
-  function Auth() {}
-  Auth.serviceName = "auth.Auth";
-  return Auth;
+var Authu = (function () {
+  function Authu() {}
+  Authu.serviceName = "auth.Authu";
+  return Authu;
 }());
 
-Auth.Login = {
+Authu.Login = {
   methodName: "Login",
-  service: Auth,
+  service: Authu,
   requestStream: false,
   responseStream: false,
   requestType: auth_auth_pb.LoginRequest,
   responseType: auth_auth_pb.LoginResponse
 };
 
-Auth.Logout = {
+Authu.Logout = {
   methodName: "Logout",
-  service: Auth,
+  service: Authu,
   requestStream: false,
   responseStream: false,
   requestType: auth_auth_pb.LogoutRequest,
   responseType: auth_auth_pb.LogoutResponse
 };
 
-exports.Auth = Auth;
+exports.Authu = Authu;
 
-function AuthClient(serviceHost, options) {
+function AuthuClient(serviceHost, options) {
   this.serviceHost = serviceHost;
   this.options = options || {};
 }
 
-AuthClient.prototype.login = function login(requestMessage, metadata, callback) {
+AuthuClient.prototype.login = function login(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Auth.Login, {
+  var client = grpc.unary(Authu.Login, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -66,11 +66,11 @@ AuthClient.prototype.login = function login(requestMessage, metadata, callback) 
   };
 };
 
-AuthClient.prototype.logout = function logout(requestMessage, metadata, callback) {
+AuthuClient.prototype.logout = function logout(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Auth.Logout, {
+  var client = grpc.unary(Authu.Logout, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
@@ -97,5 +97,5 @@ AuthClient.prototype.logout = function logout(requestMessage, metadata, callback
   };
 };
 
-exports.AuthClient = AuthClient;
+exports.AuthuClient = AuthuClient;
 

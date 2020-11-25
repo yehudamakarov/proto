@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="this actually closes #1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b7d3e6c8-55b5-4c96-8010-f30f0c884cdc" name="Default Changelist" comment="testing update to proto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +78,8 @@
     <MESSAGE value="making sure import path is clean by using source_relative" />
     <MESSAGE value="added success to responses and removed duplicate service word." />
     <MESSAGE value="this actually closes #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="this actually closes #1" />
+    <MESSAGE value="testing update to proto" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing update to proto" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -98,10 +97,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="389" y="151" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1599159276971" />
-    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2" timestamp="1606281031927">
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2" timestamp="1606282500359">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606281031927" />
+    <state x="460" y="274" width="1243" height="652" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1606282500359" />
     <state x="634" y="418" key="cloudConfig.PluginsDialog" timestamp="1599158508976">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
