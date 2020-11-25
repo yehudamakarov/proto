@@ -133,7 +133,8 @@ proto.auth.LoginRequest.prototype.toObject = function(opt_includeInstance) {
 proto.auth.LoginRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     email: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 2, "")
+    password: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    test: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -178,6 +179,10 @@ proto.auth.LoginRequest.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setPassword(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTest(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -221,6 +226,13 @@ proto.auth.LoginRequest.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getTest();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -257,6 +269,24 @@ proto.auth.LoginRequest.prototype.getPassword = function() {
  */
 proto.auth.LoginRequest.prototype.setPassword = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string test = 3;
+ * @return {string}
+ */
+proto.auth.LoginRequest.prototype.getTest = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.auth.LoginRequest} returns this
+ */
+proto.auth.LoginRequest.prototype.setTest = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
